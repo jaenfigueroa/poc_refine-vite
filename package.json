@@ -11,7 +11,10 @@
     "refine": "refine",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest",
+    "test-ui": "vitest --ui",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@emotion/react": "^11.8.2",
@@ -44,22 +47,26 @@
     "@storybook/react": "^7.4.0",
     "@storybook/react-vite": "^7.4.0",
     "@storybook/testing-library": "^0.2.0",
+    "@testing-library/react": "^14.0.0",
     "@types/node": "^18.16.2",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-react": "^4.0.0",
+    "@vitest/ui": "^0.34.3",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "eslint-plugin-storybook": "^0.6.13",
     "husky": "^8.0.3",
+    "jsdom": "^22.1.0",
     "lint-staged": "^14.0.1",
     "storybook": "^7.4.0",
     "typescript": "^4.7.4",
-    "vite": "^4.3.1"
+    "vite": "^4.3.1",
+    "vitest": "^0.34.3"
   },
   "browserslist": {
     "production": [
