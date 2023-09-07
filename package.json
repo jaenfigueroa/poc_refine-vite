@@ -3,6 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "scripts": {
+    "dev": "refine dev",
+    "build": "tsc && refine build",
+    "preview": "refine start",
+    "refine": "refine",
+    "prepare": "husky install"
+  },
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
@@ -24,6 +31,8 @@
     "react-router-dom": "^6.8.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@types/node": "^18.16.2",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
@@ -34,14 +43,10 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "typescript": "^4.7.4",
     "vite": "^4.3.1"
-  },
-  "scripts": {
-    "dev": "refine dev",
-    "build": "tsc && refine build",
-    "preview": "refine start",
-    "refine": "refine"
   },
   "browserslist": {
     "production": [
@@ -57,5 +62,9 @@
   },
   "refine": {
     "projectId": "8AaxFW-2Nc57n-ORG1fx"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": "prettier --write",
+    "*.{ts,tsx}": "eslint --cache --fix"
   }
 }
