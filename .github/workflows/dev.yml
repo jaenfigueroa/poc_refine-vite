@@ -9,7 +9,11 @@ permissions:
 
 jobs:
   build:
+    env:
+      BASE_PATH: ${{ vars.BASE_PATH }}
+
     runs-on: ubuntu-latest
+    environment: dev
 
     steps:
       # PREPARACION DEL ENTORNO
