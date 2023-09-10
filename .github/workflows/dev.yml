@@ -7,6 +7,9 @@ permissions:
   contents: write
   pages: write
 
+env:
+  BASE_PATH: ${{ secrets.BASE_PATH }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
